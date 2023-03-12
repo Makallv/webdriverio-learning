@@ -19,9 +19,6 @@ export class BlazeRegistration {
     async fillRegistrationForm() {
         await pages.basePage.getSignUpUsername().setValue(await data.UserData.newUser.userName)
         await pages.basePage.getSignUpPassword().setValue(await data.UserData.newUser.password)
-
-        // await pages.basePage.getSignUpUsername().setValue("dadsadsada2132131")
-        // await pages.basePage.getSignUpPassword().setValue("approsada213")
     }
 
     async submitRegistration() {
