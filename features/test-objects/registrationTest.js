@@ -1,26 +1,30 @@
-import {pages} from "../support/pages";
-import {data} from "../support/data";
+import { pages } from "../support/pages";
+import { data } from "../support/data";
 
-export class RegistrationTest{
-    async openDemoBlazePage(){
-       await browser.url('https://www.demoblaze.com/')
+const { expect } = require('chai');
 
-        await pages.basePage.pageTitle().getText()
-        expect(pages.basePage.pageTitle().getText()).toEqual('PRODUCT STORE')
+export class BlazeRegistration {
+    async openDemoBlazePage() {
+        await browser.url("https://www.demoblaze.com/index.html")
+        const pageTitle = await pages.basePage.pageTitle()
+        const demo = "PRODUCT STORE"
+        await expect(await pageTitle.getText()).to.equal(demo)
     }
 
     async openSignUpModal() {
-        await pages.basePage.getSignUpButton().click({button: 'left'})
-        await pages.basePage.getSignUpModal().waitForDisplayed(0)
+        await pages.basePage.getSignUpButton().click({button: "left"})
     }
 
     async fillRegistrationForm() {
         await pages.basePage.getSignUpUsername().setValue(await data.UserData.newUser.userName)
         await pages.basePage.getSignUpPassword().setValue(await data.UserData.newUser.password)
+
+        // await pages.basePage.getSignUpUsername().setValue("dadsadsada2132131")
+        // await pages.basePage.getSignUpPassword().setValue("approsada213")
     }
 
     async submitRegistration() {
-        await pages.basePage.getSignUpBtn().click({button: 'left'})
+        await pages.basePage.getSignUpBtn().click({button: "left"})
 
     }
 }

@@ -3,9 +3,9 @@ Feature:Testing Demo Blaze page
   @blazeReg
   Scenario: As a user, I can register to a page
 
-    Given I am on the login page
-    When I register with username and password
-    Then I should see a flash message saying message
+    Given User opens login page
+    When User fill the registration form
+    Then User successfully registered
 
 #
 #  Scenario Outline: As a user, I can login to a page

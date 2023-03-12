@@ -1,11 +1,11 @@
 import { RegisterTest } from "../test-objects/formTest";
-import { RegistrationTest } from "../test-objects/registrationTest";
+import { BlazeRegistration } from "../test-objects/registrationTest";
 
 class Tests {
     constructor() {
         this.RegisterTest = new RegisterTest()
-        this.RegistrationTest = new RegistrationTest();
+        this.RegistrationTest = new BlazeRegistration();
     }
 }
 
-export const test = new Tests()
+export const tests = new Tests()

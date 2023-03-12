@@ -1,25 +1,19 @@
-import { Given, When, Then} from "@wdio/cucumber-framework";
-import {test} from "../support/test";
+import { Given, When, Then } from "@wdio/cucumber-framework";
+import {tests} from "../support/test.js"
 
-Given ('I am on the login page', async function() {
-    await test.RegistrationTest.openDemoBlazePage()
+Given ("User opens login page", async function() {
+    await tests.RegistrationTest.openDemoBlazePage()
 })
 
-When ('I register with username and password', async function() {
-    await test.RegistrationTest.fillRegistrationForm()
+When ("User fill the registration form", async function() {
+    await tests.RegistrationTest.openSignUpModal()
+    await browser.pause(5000)
+    await tests.RegistrationTest.fillRegistrationForm()
+    await browser.pause(5000)
+    await tests.RegistrationTest.submitRegistration()
+    await browser.pause(5000)
 })
 
-Then ('I should see a flash message saying message', async function() {
-    await test.RegistrationTest.submitRegistration()
-})
-
-
-Given ('I am on the login page', async function() {
-
-})
-When ('I fill the username and password', async function() {
-
-})
-Then ('I should see a message', async function() {
+Then ("User successfully registered", async function() {
 
 })
