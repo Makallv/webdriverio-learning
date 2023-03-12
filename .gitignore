@@ -11,4 +11,3 @@ allure-results/**/*.xml
 /.idea
 .vscode
 *.iml
-*.json
