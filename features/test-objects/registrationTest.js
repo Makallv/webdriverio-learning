@@ -12,6 +12,7 @@ export class BlazeRegistration {
     }
 
     async openSignUpModal() {
+        await browser.pause(5000)
         await pages.basePage.getSignUpButton().click({button: "left"})
     }
 
