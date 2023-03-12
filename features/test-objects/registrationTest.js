@@ -5,6 +5,7 @@ const { expect } = require('chai');
 
 export class BlazeRegistration {
     async openDemoBlazePage() {
+        await browser.maximizeWindow()
         await browser.url("https://www.demoblaze.com/index.html")
         const pageTitle = await pages.basePage.pageTitle()
         const demo = "PRODUCT STORE"
