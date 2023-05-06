@@ -20,7 +20,7 @@
     "@wdio/local-runner": "^8.5.9",
     "@wdio/spec-reporter": "^8.4.0",
     "chai": "^4.3.7",
-    "chromedriver": "^111.0.0",
+    "chromedriver": "^113.0.0",
     "wdio-chromedriver-service": "^8.1.1"
   }
 }
