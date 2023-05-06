@@ -1,10 +1,10 @@
 import { FormPage } from "../page-objects/formPage.js";
-import { HomePage } from "../page-objects/homePage.js";
+import { IFramePage } from "../page-objects/iFramePage";
 
 class Pages {
     constructor(){
         this.formPage = new FormPage()
-        this.basePage = new HomePage()
+        this.iFramePage = new IFramePage()
     }
 }
 

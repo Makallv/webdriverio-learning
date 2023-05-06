@@ -1,6 +1,6 @@
 Feature: The Internet Guinea Pig Website
 
-  Scenario Outline: As a user, I can register on page
+  Scenario: As a user, I can register on page
 
     Given I am on the login page
     When I register with username and password
