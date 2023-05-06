@@ -13,7 +13,7 @@ export class BlazeRegistration {
     }
 
     async openSignUpModal() {
-        await pages.basePage.getSignUpButton().click({button: "left"})
+        await pages.basePage.getSignUpButton()
     }
 
     async fillRegistrationForm() {
@@ -22,7 +22,7 @@ export class BlazeRegistration {
     }
 
     async submitRegistration() {
-        await pages.basePage.getSignUpBtn().click({button: "left"})
+        await pages.basePage.getSignUpBtn()
 
     }
 }

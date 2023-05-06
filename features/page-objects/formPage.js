@@ -13,7 +13,7 @@ export class FormPage {
     }
 
     getOtherGender() {
-        return $('#gender-radio-3')
+        return $('#gender-radio-3').click({button: 'left'})
     }
 
     getUserMobNumber() {
@@ -21,7 +21,7 @@ export class FormPage {
     }
 
     getSubmitButton() {
-        return $('#submit')
+        return $('#submit').click({button: 'left'})
     }
 
 

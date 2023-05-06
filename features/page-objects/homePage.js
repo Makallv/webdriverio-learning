@@ -1,7 +1,7 @@
 export class HomePage{
 
     getSignUpButton() {
-        return $('#signin2')
+        return $('#signin2').click({button: 'left'})
     }
 
     getSignUpUsername() {
@@ -17,7 +17,7 @@ export class HomePage{
     }
 
     getSignUpBtn() {
-        return $('[onclick="register()"]')
+        return $('[onclick="register()"]').click({button: 'left'})
     }
 
     pageTitle() {

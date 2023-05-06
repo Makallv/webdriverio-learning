@@ -10,11 +10,11 @@ export class RegisterTest {
         await pages.formPage.getFirstNameInput().setValue(await  data.UserData.newUser.firstName)
         await pages.formPage.getLastNameInput().setValue(await data.UserData.newUser.lastName)
         await pages.formPage.getEmailInput().setValue(await data.UserData.newUser.email)
-        await pages.formPage.getOtherGender().click({button: 'left'})
+        await pages.formPage.getOtherGender()
         await pages.formPage.getUserMobNumber().setValue(await data.UserData.newUser.number)
     }
 
     async submitForm() {
-        await pages.formPage.getSubmitButton().click({button: 'left'})
+        await pages.formPage.getSubmitButton()
     }
 }
