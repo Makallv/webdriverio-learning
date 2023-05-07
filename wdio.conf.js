@@ -113,6 +113,8 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
+
+    // services: ['devtools'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -236,7 +238,14 @@ exports.config = {
      * @param {String}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
-    // beforeFeature: function (uri, feature) {
+    // beforeFeature: async function () {
+    //     await browser.emulateDevice('iPhone X')
+    //
+    //     await browser.enablePerformanceAudits({
+    //         networkThrottling: 'Good 3G',
+    //         cpuThrottling: 4,
+    //         formFactor: 'mobile'
+    //     })
     // },
     /**
      *
@@ -269,7 +278,7 @@ exports.config = {
         if (error) {
             await browser.takeScreenshot();
         }
-    }
+    },
     /**
      *
      * Runs after a Cucumber Scenario.
@@ -288,8 +297,11 @@ exports.config = {
      * @param {String}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
-    // afterFeature: function (uri, feature) {
+
+    // afterFeature: async function () {
+    //     await browser.disablePerformanceAudits()
     // },
+
     
     /**
      * Runs after a WebdriverIO command gets executed
