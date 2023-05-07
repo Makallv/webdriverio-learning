@@ -1,5 +1,5 @@
 import {Given, When, Then} from "@wdio/cucumber-framework";
-import { tests } from "../support/tests";
+import { tests } from "../support/test";
 
 
 Given ('I am on the login page', async function() {
