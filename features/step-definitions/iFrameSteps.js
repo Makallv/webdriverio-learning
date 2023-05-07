@@ -6,6 +6,8 @@ Given("User opens iFrame page", async function() {
 });
 
 Then("User checks iFrame", async function(){
-    await tests.IFrameTest.checkIFrmaeHeading()
+    await tests.IFrameTest.checkIFrameHeading()
+
+    await tests.IFrameTest.openNewTab()
 })
 

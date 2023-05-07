@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "singletag": "wdio run ./wdio.conf.js --cucumberOpts.tagExpression='@single'",
+    "multitag": "wdio run ./wdio.conf.js --cucumberOpts.tagExpression='@multiple'"
   },
   "keywords": [],
   "author": "",

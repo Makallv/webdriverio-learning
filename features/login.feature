@@ -1,5 +1,6 @@
 Feature: The Internet Guinea Pig Website
 
+  @register
   Scenario: As a user, I can register on page
 
     Given I am on the login page
