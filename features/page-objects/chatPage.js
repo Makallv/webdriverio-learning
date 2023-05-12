@@ -36,7 +36,7 @@ export class ChatPage{
         return browser[`user${userId}`].$('#disconnectBtn')
     }
 
-    assertDissconnectedChat(userId, userName) {
+    assertDisconnectedChat(userId, userName) {
         return browser[`user${userId}`].$(`//div[text()="${userName}: has disconnected"]`)
     }
 

@@ -23,7 +23,7 @@ export class ChatTest {
         await pages.chatPage.getConnectionButton(2).click()
     }
 
-    // Asserting oursefls
+    // Asserting ourselves
     async assertUserJoin() {
         await pages.chatPage.assertJoinChat(1, await data.UserChat.firstUser.firstName)
         await pages.chatPage.assertUserName(1, await data.UserChat.firstUser.firstName)
@@ -62,15 +62,15 @@ export class ChatTest {
 
     async firstUserDisconnect() {
         await pages.chatPage.getDisconnectButton(1).click()
-        await pages.chatPage.assertDissconnectedChat(1, await data.UserChat.firstUser.firstName)
+        await pages.chatPage.assertDisconnectedChat(1, await data.UserChat.firstUser.firstName)
     }
 
     async secondUserAssertsFirstUserDsc() {
-        await pages.chatPage.assertDissconnectedChat(2, await data.UserChat.firstUser.firstName)
+        await pages.chatPage.assertDisconnectedChat(2, await data.UserChat.firstUser.firstName)
     }
 
     async secondUserDisconnect() {
         await pages.chatPage.getDisconnectButton(2).click()
-        await pages.chatPage.assertDissconnectedChat(2, await data.UserChat.secondUser.firstName)
+        await pages.chatPage.assertDisconnectedChat(2, await data.UserChat.secondUser.firstName)
     }
 }
