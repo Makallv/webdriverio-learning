@@ -5,13 +5,18 @@ exports.config = merge(baseConfig.config, {
     maxInstances: 4,
     capabilities: {
         user1: {
-          capabilities: {
-            browserName: 'chrome',
-          }
+            capabilities: {
+                browserName: 'firefox',
+            }
         },
         user2: {
             capabilities: {
                 browserName: 'chrome',
+            }
+        },
+        user3: {
+            capabilities: {
+                browserName: 'MicrosoftEdge',
             }
         }
     }
