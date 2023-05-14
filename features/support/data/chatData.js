@@ -5,6 +5,7 @@ export default class UserChat {
     constructor() {
         this.firstUser = new FirstUser(faker.name.firstName(),faker.lorem.text())
         this.secondUser = new SecondUser(faker.name.firstName(),faker.lorem.text())
+        this.thirdUser = new ThirdUser(faker.name.firstName(),faker.lorem.text())
 
     }
 }
@@ -20,6 +21,16 @@ class FirstUser {
 }
 
 class SecondUser {
+    constructor(
+        firstName,
+        lorem
+    ){
+        this.firstName = firstName
+        this.lorem = lorem
+    }
+}
+
+class ThirdUser {
     constructor(
         firstName,
         lorem
